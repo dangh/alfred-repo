@@ -53,7 +53,7 @@
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -67,7 +67,7 @@
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>runningsubtext</key>
-				<string>Searching...</string>
+				<string>Searching{query}...</string>
 				<key>script</key>
 				<string>./node_modules/.bin/run-node index.js "$1"</string>
 				<key>scriptargtype</key>
@@ -77,11 +77,11 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Open npm package repo in default browser</string>
+				<string>Enter package name...</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>

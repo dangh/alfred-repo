@@ -1,6 +1,6 @@
 {
   "name": "alfred-repo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Open npm package repo in default browser",
   "license": "MIT",
   "repository": "dangh/alfred-repo",
@@ -28,7 +28,8 @@
     "alfy"
   ],
   "dependencies": {
-    "alfy": "^0.6.0"
+    "alfy": "^0.6.0",
+    "fuse.js": "^3.2.1"
   },
   "devDependencies": {
     "alfy-test": "^0.3.0",
