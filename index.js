@@ -40,6 +40,7 @@ if (repoUrl) {
 	alfy
 		.fetch(getPackageManifestUrl(packageName), {
 			json: true,
+			timeout: 3000,
 			transform: extractRepositoryUrl
 		})
 		.then(repoUrl => {
