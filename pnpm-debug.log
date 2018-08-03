@@ -1,0 +1,28 @@
+---
+  0 debug pnpm:package-json: 
+    initial: 
+      name: "pnpm-global-pkg"
+      private: true
+      version: "1.0.0"
+      dependencies: 
+        @storybook/cli: "^4.0.0-alpha.4"
+        babel-plugin-preval: "^3.0.0"
+        cactus: "github:dangh/cactus#feat-bonjour"
+        commitizen: "^2.10.1"
+        cz-conventional-changelog: "^2.1.0"
+        nodemon: "^1.17.5"
+        nps: "^5.9.2"
+        nps-utils: "^1.6.0"
+        pnpm: "^2.11.2"
+        preact-cli: "^2.2.1"
+        serve: "^9.1.2"
+        whybundled: "^1.2.1"
+      readme: "ERROR: No README data found!"
+      _id: "pnpm-global-pkg@1.0.0"
+    prefix: "/usr/local/pnpm-global/1"
+  1 debug pnpm:stage: "resolution_started"
+  2 debug pnpm:progress: 
+    pkg: 
+      name: "find-up-cli"
+      rawSpec: "find-up-cli"
+    status: "installing"
