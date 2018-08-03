@@ -15,14 +15,32 @@ let showResult = repoUrl => {
 	]);
 };
 
+let getPackageManifestUrl = packageName => {
+	return packageName.startsWith('@') ?
+		`https://registry.npmjs.org/${packageName}` :
+		`https://registry.npmjs.org/${packageName}/latest`;
+};
+
+let extractRepositoryUrl = manifest => {
+	let url = (manifest.repository && manifest.repository.url) ||
+		(manifest.bugs && manifest.bugs.url) ||
+		manifest.homepage ||
+		`https://npmjs.org/package/${manifest.name}`;
+	url = url.replace(/^git(\+(ssh|https))?:\/\/(git@)?/, 'https://');
+	url = url.replace(/\.git$/, '');
+	url = url.replace(/\/issues\/?$/, '');
+	url = url.replace(/#.*/, '');
+	return url;
+};
+
 let repoUrl = alfy.cache.get(packageName);
 if (repoUrl) {
 	showResult(repoUrl);
 } else {
 	alfy
-		.fetch(`https://api.npms.io/v2/package/${packageName}`, {
+		.fetch(getPackageManifestUrl(packageName), {
 			json: true,
-			transform: body => body.collected.metadata.links.repository
+			transform: extractRepositoryUrl
 		})
 		.then(repoUrl => {
 			alfy.cache.set(packageName, repoUrl, {maxAge: ONE_MONTH});
