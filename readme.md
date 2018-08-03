@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --global alfred-repo
+$ npm install --global dangh/alfred-repo
 ```
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
