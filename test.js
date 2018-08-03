@@ -8,7 +8,8 @@ test(async t => {
 	t.deepEqual(result, [
 		{
 			title: 'Open n repo',
-			subtitle: 'https://github.com/tj/n'
+			subtitle: 'https://github.com/tj/n',
+			arg: 'https://github.com/tj/n'
 		}
 	]);
 });
