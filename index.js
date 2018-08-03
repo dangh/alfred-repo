@@ -10,7 +10,8 @@ alfy
 		alfy.output([
 			{
 				title: `Open ${alfy.input} repo`,
-				subtitle: repoUrl
+				subtitle: repoUrl,
+				arg: repoUrl
 			}
 		])
 	);
