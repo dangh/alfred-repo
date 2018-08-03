@@ -1,6 +1,6 @@
 {
   "name": "alfred-repo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Open npm package repo in default browser",
   "license": "MIT",
   "repository": "dangh/alfred-repo",
